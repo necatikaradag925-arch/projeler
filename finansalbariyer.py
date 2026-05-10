@@ -1,4 +1,4 @@
-maddidurum = input( "Bu alacağın şey için bütçen var mı? ") 
+maddidurum = input( "Bu alacağın şey için bütçen var mı? ").lower()
 
 if maddidurum == "hayır":
     print(" Önce para biriktirmelisin.  ")  
@@ -14,7 +14,7 @@ elif maddidurum == "evet":
     elif zaman > "2":
         print("Bu ürünü almak kiralamak daha uygun olabilir. ") 
 
-    alternatif = input("bu ürünün daha ucuz ama aynı işi gören bir alternatifi var mı? ") 
+    alternatif = input("bu ürünün daha ucuz ama aynı işi gören bir alternatifi var mı? ").lower()
 
     if alternatif == "evet":
         print("O zaman o alternatifi almak daha mantıklı olabilir. ")   
