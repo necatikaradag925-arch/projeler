@@ -15,10 +15,10 @@ pygame.mixer.init()
 # 2. "Sör" Ağırlıklı Cümleler
 
 cümleler = [   
-    "Sör, sistemler etkinleştirildi. Tüm ağ protokolleri çevrimiçi.",
+    ", sistemler etkinleştirildi. Tüm ağ protokolleri çevrimiçi.",
     " bütün fonksiyonlar normal düzeyde çalışıyor. Her şey hazır.",
-    "Sör, sistem taraması tamamlandı. Herhangi bir dış müdahale tespit edilmedi.",
-    "Sör, güç seviyeleri optimize edildi. Bir sonraki talimatınızı bekliyorum.",
+    ", sistem taraması tamamlandı. Herhangi bir dış müdahale tespit edilmedi.",
+    " güç seviyeleri optimize edildi. Bir sonraki talimatınızı bekliyorum.",
     " veri akışı dengelendi. Komutlarınızı bekliyorum.",
     " erişim onaylandı. Sistem merkezi kontrolü tamamen sizin yetkinizde.",
     " cihaz yapılandırması tamamlandı. Her şey yolunda görünüyor.",
@@ -27,16 +27,17 @@ cümleler = [
 
 print("--- Jarvis Sistemi Aktif ---")
 print("Yeni replik için ENTER'a bas, çıkmak için 'q' yaz.")
-
+  
 # 3. ANA DÖNGÜ
 while True:
     islem = input("\nKomut bekliyorum (Enter/q): ").lower()
     
     if islem == 'q':
-        print("Sistem kapatılıyor. İyi günler sör.")
-        break
-    
-    secilen_metin = random.choice(cümleler)
+        by = ["Sistem, kapanıyor, görüşmek üzere efendim."]
+        secilen_metin = random.choice(by)
+    else:
+        secilen_metin = random.choice(cümleler)
+
     print(f"Jarvis: {secilen_metin}")
 
     try:
@@ -59,8 +60,15 @@ while True:
         pygame.mixer.music.load(dosya_adi)
         pygame.mixer.music.play()
         
+        if islem == 'q':
+            # Sesin çalması için kısa bir süre bekle ve çık
+            while pygame.mixer.music.get_busy():
+                time.sleep(0.1)
+            break
+            
     except Exception as e:
         print(f"Hata oluştu: {e}")
+        if islem == 'q': break
 
 # Kapatırken motoru durdur
 pygame.mixer.quit()
