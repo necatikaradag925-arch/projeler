@@ -23,6 +23,7 @@ cümleler = [
     " erişim onaylandı. Sistem merkezi kontrolü tamamen sizin yetkinizde.",
     " cihaz yapılandırması tamamlandı. Her şey yolunda görünüyor.",
     " sistem durumu kontrol ediliyor. Tüm sunucular aktif ve stabil durumda.",
+    "moruk alime tespit edildi"
 ]  
 
 print("--- Jarvis Sistemi Aktif ---")
