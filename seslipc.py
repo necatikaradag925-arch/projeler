@@ -6,7 +6,7 @@ import pygame
 
 # 1. API Bağlantısı
 client = ElevenLabs(
-    api_key="sk_f569bbf7333b9e5c57b020b12cfb7e90314d7a51904c0d52"
+    api_key=""
 )
 
 # Ses motorunu başlat (Pencere açılmaması için şart)
@@ -24,6 +24,7 @@ cümleler = [
     " cihaz yapılandırması tamamlandı. Her şey yolunda görünüyor.",
     " sistem durumu kontrol ediliyor. Tüm sunucular aktif ve stabil durumda.",
     "moruk alime tespit edildi"
+
 ]  
 
 print("--- Jarvis Sistemi Aktif ---")
