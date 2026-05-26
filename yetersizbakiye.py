@@ -6,7 +6,7 @@ kantin_fiyatlari = {
     "çikolata": 15,
     "bisküvi": 10,
     "döner": 50,
-    "ayran": 15
+    "ayran": 20
 }
 
 print("Kantin Listesi ve Fiyatlar: ", kantin_fiyatlari)
