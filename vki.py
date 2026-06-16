@@ -9,7 +9,7 @@ vki = kilo / (boy * boy)
         
 
 
-print(f"vücut kitle indeksinizs: {vki:.2f}")     
+print(f"vücut kitle indeksiniz: {vki:.2f}")     
 
     
 if vki < 18.5:
